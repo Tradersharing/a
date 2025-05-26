@@ -3,6 +3,38 @@ function getProducts() {
   return JSON.parse(localStorage.getItem("products") || "[]");
 }
 
+const exampleProducts = [
+  {
+    name: "Speaker 18 inch ACR",
+    image: "https://cdn.pixabay.com/photo/2017/11/09/21/41/speaker-2934628_960_720.jpg",
+    stock: 15,
+    price: 850000,
+    weight: "7 kg",
+    voicecoil: "5 inch",
+    desc: "Speaker 18 inch ACR cocok untuk kamu yang ingin suara bass besar dan jernih. Cocok untuk sound system rumahan maupun event."
+  },
+  {
+    name: "Speaker 12 inch ACR",
+    image: "https://cdn.pixabay.com/photo/2016/03/27/22/34/speaker-1284693_960_720.jpg",
+    stock: 10,
+    price: 450000,
+    weight: "4 kg",
+    voicecoil: "3 inch",
+    desc: "Speaker 12 inch ACR dengan suara jernih dan tahan lama, cocok untuk penggemar musik sejati."
+  },
+  {
+    name: "Speaker 10 inch ACR",
+    image: "https://cdn.pixabay.com/photo/2018/11/15/22/33/speaker-3819886_960_720.jpg",
+    stock: 8,
+    price: 350000,
+    weight: "3 kg",
+    voicecoil: "2.5 inch",
+    desc: "Speaker 10 inch ACR praktis dan hemat tempat, cocok untuk kebutuhan audio sehari-hari."
+  }
+];
+
+
+
 // Simpan daftar produk ke localStorage
 function saveProducts(products) {
   localStorage.setItem("products", JSON.stringify(products));
