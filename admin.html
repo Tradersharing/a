@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel - Toko Al-Fattah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="red-bg">
+  <script>
+    const password = "admin123"; // Ganti ini dengan password kamu sendiri nanti
+    const input = prompt("Masukkan password admin:");
+    if (input !== password) {
+      alert("Password salah! Anda tidak boleh masuk.");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <header>
+    <h1 class="title">Admin Panel - Toko Al-Fattah</h1>
+    <p class="subtitle">Alamat: Bumisari Padukuhan Gewok</p>
+  </header>
+
+  <form id="product-form">
+    <input type="hidden" id="product-id" />
+    <input type="text" id="product-name" placeholder="Nama Produk" required />
+    <input type="url" id="product-image" placeholder="URL Gambar" required />
+    <input type="number" id="product-stock" placeholder="Jumlah Stok" min="0" required />
+    <input type="number" id="product-price" placeholder="Harga (Rp)" min="0" required />
+    <input type="text" id="product-weight" placeholder="Berat (kg)" required />
+    <input type="text" id="product-voicecoil" placeholder="Voice Coil (inch)" required />
+    <textarea id="product-desc" placeholder="Keterangan Produk" rows="3" required></textarea>
+    <button type="submit">Tambah / Update Produk</button>
+    <button type="button" id="cancel-edit" style="display:none; margin-left:10px;">Batal Edit</button>
+  </form>
+
+  <section id="admin-product-list" class="product-grid"></section>
+
+  <!-- WA floating icon -->
+  <a href="https://wa.me/1234567" target="_blank" class="wa-float" aria-label="Chat WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
